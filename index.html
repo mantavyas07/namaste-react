@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css"/>
+<!doctype html>
+<html lang="en" class="scheme-light dark:scheme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        let theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch {
+          // Use the system preference when browser storage is unavailable.
+        }
+        const isDark =
+          theme === "dark" ||
+          (theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
+    <link rel="stylesheet" href="./index.css" />
     <title>Namaste-React</title>
-</head>
+  </head>
 
-<body>
-    <div id="root"></div>
-        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
-        <script src="./App.js"></script>
-</body>
+  <body class="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-100">
+    <div id="root">
+      <h1>Mantavya is here for React</h1>
+    </div>
 
+    <script type="module" src="./src/App.js"></script>
+  </body>
 </html>

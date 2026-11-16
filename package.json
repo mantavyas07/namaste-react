@@ -1,0 +1,37 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mantavyas07/namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/mantavyas07/namaste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantavyas07/namaste-react.git"
+  },
+  "license": "ISC",
+  "author": "Mantavya",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^6.30.6",
+    "tailwindcss": "^4.3.5"
+  },
+  "browserslist": [
+    "last 2 Chrome version",
+    "last 2 safari version",
+    "last 2 firefox version",
+    "last 2 edge version"
+  ]
+}
